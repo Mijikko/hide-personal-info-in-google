@@ -3,14 +3,27 @@
 #fbar > div > div:where(:nth-child(2)),
 .b2hzT,
 /** 検索結果上部に表示される住所 */
-dynamic-visibility-control > div > div > div > div:first-child > span > :nth-child(3 of span) {
+dynamic-visibility-control > div > div > div > div:first-child > span > :nth-child(3 of span),
+/* スマホ版表示のページ下部の住所 */
+#swml div > div > a > div {
   display: none !important;
 }
 
 
 dynamic-visibility-control > div > div > div > div:first-child > span::after,
-:is(.eKPi4, .BUSxSd) > span::after {
+:is(.eKPi4, .BUSxSd) > span::after,
+/* スマホ版表示のページ下部の住所 */
+#swml div > div > a::after {
   content: "個人情報の為非表示" !important;
   /* display: block !important; */
   max-width: auto !important;
+}
+
+/* スマホ版表示の住所の詳細表示ボタン */
+dynamic-visibility-control > div > div > div > :is(div:nth-child(3), .R0cdZ),
+/* スマホ版表示のフッター */
+#swml div > div > a {
+  /* クリックしても反応しないようにする */
+  pointer-events: none !important;
+  cursor: default !important; 
 }
