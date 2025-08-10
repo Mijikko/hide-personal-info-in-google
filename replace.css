@@ -3,8 +3,7 @@
 #fbar > div > div:where(:nth-child(2)),
 .b2hzT,
 /** 検索結果上部に表示される住所 */
-dynamic-visibility-control > div > div > div > div:first-child > span > :nth-child(3 of span),
-.BBwThe {
+dynamic-visibility-control > div > div > div > div:first-child > span > :nth-child(3 of span) {
   display: none !important;
 }
 
